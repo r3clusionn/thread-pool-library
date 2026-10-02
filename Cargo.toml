@@ -1,0 +1,16 @@
+[package]
+name = "workpool"
+version = "0.1.0"
+edition = "2021"
+description = "A thread pool with a shared or work-stealing queue, bounded queues, scoped tasks, panic isolation and graceful shutdown."
+license = "MIT"
+
+[dependencies]
+
+[dev-dependencies]
+rayon = "1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+debug = false
